@@ -1,0 +1,64 @@
+{\rtf1\ansi\ansicpg1252\cocoartf1348\cocoasubrtf170
+{\fonttbl\f0\fnil\fcharset0 HelveticaNeue;\f1\fnil\fcharset0 Menlo-Regular;}
+{\colortbl;\red255\green255\blue255;\red202\green202\blue202;}
+\paperw11900\paperh16840\margl1440\margr1440\vieww21300\viewh8400\viewkind0
+\deftab720
+\pard\pardeftab720\sl320
+
+\f0\fs24 \cf0 \expnd0\expndtw0\kerning0
+2.)Buatlah query untuk melakukan create table barang dan kategori barang
+\fs48 \expnd0\expndtw0\kerning0
+ \
+
+\fs24 \expnd0\expndtw0\kerning0
+- CREATE TABLE \'a0Barang (\
+IDBarang int,\
+NamaBarang varchar (255),\
+DeskripsiBarang varchar (255),\
+Kategori varchar (255),\
+WaktuMasuk timestamp\
+);\
+\
+- CREATE TABLE KategoriBarang (\
+IDKategori int,\
+Kategori varchar\
+);\
+\
+3.) Buatlah query untuk melakukan select, insert, update barang\
+ - SELECT * FROM Barang ;\
+ - INSERT * INTO Barang ( IDBarang, NamaBarang, DeskripsiBarang, Kategori, WaktuMasuk)\
+   VALUES ('1', 'BARBIE MY SCENE', ' Action Figure Barbie edisi MY SCENE', 'Action Figure', '2024-02-17 14:00:00' );\
+   INSERT * INTO Barang ( IDBarang, NamaBarang, DeskripsiBarang, Kategori, WaktuMasuk)\
+   VALUES ('2', 'STEEL', ' Action Figure STEEL ', 'Action Figure', '2024-02-17 15:00:00' );\
+   INSERT * INTO Barang ( IDBarang, NamaBarang, DeskripsiBarang, Kategori, WaktuMasuk)\
+   VALUES ('3', 'HOT WHEELS MUSCLE MANIA', ' Die Cast MUSCLE MANIA dari HOT WHEELS ', 'Die Cast', '2024-02-17 16:00:00' );\
+   INSERT * INTO Barang ( IDBarang, NamaBarang, DeskripsiBarang, Kategori, WaktuMasuk)\
+   VALUES ('4', 'MATCHBOX DODGE VIPER GT-R', ' Die Cast DODGE VIPER GT-R  dari MATCHBOX', 'Die Cast', '2024-02-17 17:00:00' );\
+   INSERT * INTO Barang ( IDBarang, NamaBarang, DeskripsiBarang, Kategori, WaktuMasuk)\
+   VALUES ('5', 'GASING BAMBU', ' Mainan Tradisional Gasing Bambu khas Indonesia', 'Mainan Tradisional', '2024-02-17 18:00:00' );\
+ - UPDATE Barang\
+   SET DeskripsiBarang = ' Action Figure salah satu superhero DC COMICS dan teman SUPERMAN yaitu STEEL '\
+   WHERE IDBarang = 2;\
+\
+4.) Buatlah query untuk melakukan select, insert, update kategori barang\
+- SELECT * FROM KategoriBarang;\
+- INSERT * INTO Barang ( IDKategori, Kategori)\
+   VALUES ('1', 'Action Figure' );\
+   INSERT * INTO Barang ( IDKategori, Kategori)\
+   VALUES ('2', 'Die Cast' );\
+   INSERT * INTO Barang ( IDKategori, Kategori)\
+   VALUES ('3', 'Mainan ' );\
+- UPDATE KategoriBarang\
+   SET Kategori = ' Mainan Tradisional'\
+   WHERE IDBarang = 3;\
+\
+5. Buatlah query untuk melakukan join relasi antara barang dan kategori barang\
+SELECT  * FROM Barang JOIN KategoriBarang ON Barang.Kategori = KategoriBarang.Kategori; \
+\
+\
+
+\f1 \cf2 \expnd0\expndtw0\kerning0
+ 
+\f0 \cf0 \expnd0\expndtw0\kerning0
+\
+}
